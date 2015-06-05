@@ -37,4 +37,11 @@ describe(Member) do
       expect(Member.clear()).to(eq([]))
     end
   end
+  
+  describe('#id') do 
+    it('ascribes an id number to an instance of Member') do 
+      test_member = Member.new(:first_name => "Mason", :last_name => "Brock")
+      expect(test_member.id()).to(eq(1))
+    end
+  end
 end
