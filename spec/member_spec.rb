@@ -2,6 +2,9 @@ require('rspec')
 require('member')
 
 describe(Member) do 
+  before do 
+    Member.clear()
+  end
   describe('#first_name') do 
     it('returns the fist name of a member') do 
       test_member = Member.new(:first_name => "Jeff", :last_name => "Holmes")

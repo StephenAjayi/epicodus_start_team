@@ -1,0 +1,19 @@
+<h1>Welcome to Start Team</h1>
+
+
+<% if @teams.any?() %>
+  <ul>
+    <% @teams.each() do |team| %>
+    <li><a href="/teams/<%= team.id() %>"><%= team.name() %></a></li>
+    <% end %>
+  </ul>
+<% else %>
+  <h2>There are currently no teams, add one below.</h2>
+<% end %>
+
+<form action="/team_added" method="post">
+  <input type="text" name="name" placeholder="Enter team name">
+  <button type="submit">Add Team</button>
+</form>
+  
+    
