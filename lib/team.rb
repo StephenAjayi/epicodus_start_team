@@ -18,7 +18,16 @@ class Team
   
   define_singleton_method(:clear) do 
     @@all_teams = []
-  end 
-    
+  end
+  
+  define_singleton_method(:find) do |id| 
+    found_team = nil
+    @@all_teams.each() do |team|
+      if team.id().eql?(id)
+        found_team = team
+      end
+    end
+    found_team
+  end
 end
 

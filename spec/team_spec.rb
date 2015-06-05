@@ -38,4 +38,14 @@ describe(Team) do
       expect(test_team.id()).to(eq(1))
     end
   end
+  
+  describe('.find') do 
+    it('return an instance of team by its id') do 
+      test_team = Team.new(:name => "Overdrive")
+      test_team.save()
+      test_team2 = Team.new(:name => "Reach")
+      test_team2.save()
+      expect(Team.find(test_team.id())).to(eq(test_team))
+    end
+  end
 end
