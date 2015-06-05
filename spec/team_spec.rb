@@ -56,4 +56,13 @@ describe(Team) do
       expect(test_team.members()).to(eq([]))
     end
   end
+  
+  describe('#add_member') do 
+    it('adds a member to a team') do 
+      test_team =  Team.new(:name => "Think Big")
+      test_member = Member.new(:first_name => "Jason", :last_name => "Masters")
+      test_team.add_member(test_member)
+      expect(test_team.members()).to(eq([test_member]))
+    end
+  end
 end
