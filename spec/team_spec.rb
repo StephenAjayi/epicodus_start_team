@@ -14,6 +14,7 @@ describe(Team) do
       expect(Team.all()).to(eq([]))
     end
   end
+  
   describe('#save') do 
     it('save and instance of Team to an array') do 
       test_team = Team.new(:name => "Quick Strike")
@@ -21,12 +22,20 @@ describe(Team) do
       expect(Team.all()).to(eq([test_team]))
     end
   end
+  
   describe('.clear') do 
     it('empty all saved instances of Team from the array') do 
       test_team = Team.new(:name => "Rapture")
       test_team.save()
       Team.clear()
       expect(Team.all()).to(eq([]))
+    end
+  end
+  
+  describe('#id') do 
+    it('ascribes an intance of team an is number') do 
+      test_team = Team.new(:name => "Major Lazer") 
+      expect(test_team.id()).to(eq(1))
     end
   end
 end
