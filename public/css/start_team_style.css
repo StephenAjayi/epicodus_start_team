@@ -1,0 +1,38 @@
+body {
+  background: #f4f4f4;
+}
+.home-image {
+  background: url("/images/team.jpg");
+  margin-left: 10px;
+  margin-right:10px;
+  position: relative;
+  width: 2000px;
+  
+}
+
+.home-image h1 {
+  color: white;
+}
+
+.home-image label {
+  color: white;
+}
+
+.jumbotron-logo {
+  background: url("/images/question.jpg") center repeat;
+  padding-top:  200px;
+  padding-bottom: 200px;
+}
+
+.jumbotron {
+  background: transparent;
+  color: #79b743;
+}
+
+.navbar-fixed-top {
+  background: #183183;
+}
+
+.nav-pills a {
+  color: #333
+}
