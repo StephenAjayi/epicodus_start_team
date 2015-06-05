@@ -10,4 +10,9 @@ class Team
   define_singleton_method(:all) do 
     @@all_teams
   end
+  
+  define_method(:save) do 
+    @@all_teams.push(self)
+  end
 end
+

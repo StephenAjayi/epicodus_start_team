@@ -14,4 +14,11 @@ describe(Team) do
       expect(Team.all()).to(eq([]))
     end
   end
+  describe('#save') do 
+    it('save and instance of team to an array') do 
+      test_team = Team.new(:name => "Quick Strike")
+      test_team.save()
+      expect(Team.all()).to(eq([test_team]))
+    end
+  end
 end
