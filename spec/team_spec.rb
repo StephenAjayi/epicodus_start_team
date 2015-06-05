@@ -6,6 +6,7 @@ describe(Team) do
   before do
     Team.clear()
   end
+  
   describe('#name') do 
     it('returns the name of a team') do 
       test_team =Team.new(:name => "Blizzard")
