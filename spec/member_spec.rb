@@ -15,9 +15,18 @@ describe(Member) do
       expect(test_member.last_name()).to(eq("Carter"))
     end
   end
+  
   describe('.all') do 
     it('starts out empty at first') do 
       expect(Member.all()).to(eq([]))
+    end
+  end
+  
+  describe('#save') do 
+    it('save an intance of Member to an array') do 
+    test_member = Member.new(:first_name => "Greg", :last_name => "Marx")
+    test_member.save()
+    expect(Member.all()).to(eq([test_member]))
     end
   end
 end

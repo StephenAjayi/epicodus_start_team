@@ -11,6 +11,9 @@ class Member
   define_singleton_method(:all) do
     @@all_members
   end
-    
+  
+  define_method(:save) do 
+    @@all_members.push(self)
+  end
 end
     
