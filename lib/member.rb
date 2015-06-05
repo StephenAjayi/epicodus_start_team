@@ -15,5 +15,9 @@ class Member
   define_method(:save) do 
     @@all_members.push(self)
   end
+  
+  define_singleton_method(:clear) do 
+    @@all_members = []
+  end
 end
     

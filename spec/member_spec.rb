@@ -29,4 +29,12 @@ describe(Member) do
     expect(Member.all()).to(eq([test_member]))
     end
   end
+  
+  describe('.clear') do 
+    it('empties all saved intances of Member from array') do 
+      test_member = Member.new(:first_name => "Blake", :last_name => "Martin")
+      test_member.save()
+      expect(Member.clear()).to(eq([]))
+    end
+  end
 end
