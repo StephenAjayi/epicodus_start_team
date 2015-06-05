@@ -15,4 +15,9 @@ describe(Member) do
       expect(test_member.last_name()).to(eq("Carter"))
     end
   end
+  describe('.all') do 
+    it('starts out empty at first') do 
+      expect(Member.all()).to(eq([]))
+    end
+  end
 end
