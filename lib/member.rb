@@ -20,5 +20,15 @@ class Member
   define_singleton_method(:clear) do 
     @@all_members = []
   end
+  
+  define_singleton_method(:find) do |id| 
+    found_member = nil
+    @@all_members.each() do |member|
+      if member.id().eql?(id)
+        found_member = member
+      end
+    end
+    found_member
+  end
 end
     

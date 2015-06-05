@@ -44,4 +44,14 @@ describe(Member) do
       expect(test_member.id()).to(eq(1))
     end
   end
+  
+  describe('.find') do 
+    it('returns an instance of Member by its id number') do 
+      test_member = Member.new(:first_name => "Matt", :last_name => "Grey")
+      test_member.save()
+      test_member2 = Member.new(:first_name => "Sarah", :last_name => "Smith")
+      test_member2.save()
+      expect(Member.find(test_member.id())).to(eq(test_member))
+    end
+  end
 end
