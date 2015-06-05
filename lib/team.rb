@@ -1,11 +1,12 @@
 class Team
   @@all_teams = []
   
-  attr_reader(:name, :id)
+  attr_reader(:name, :id, :members)
   
   define_method(:initialize) do |attributes|
     @name = attributes.fetch(:name)
     @id = @@all_teams.length().+(1)
+    @members = []
   end
   
   define_singleton_method(:all) do 

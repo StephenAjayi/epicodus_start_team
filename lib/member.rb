@@ -1,12 +1,13 @@
 class Member
   
   @@all_members = []
-  attr_reader(:first_name, :last_name, :id)
+  attr_reader(:first_name, :last_name, :id, :members)
   
   define_method(:initialize) do |attributes|
     @first_name = attributes.fetch(:first_name)
     @last_name =attributes.fetch(:last_name)
     @id = @@all_members.length().+(1)
+    @members = []
   end
   
   define_singleton_method(:all) do

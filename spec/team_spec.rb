@@ -1,5 +1,6 @@
 require('rspec')
 require('team')
+require('member')
 
 describe(Team) do 
   describe('#name') do 
@@ -46,6 +47,13 @@ describe(Team) do
       test_team2 = Team.new(:name => "Reach")
       test_team2.save()
       expect(Team.find(test_team.id())).to(eq(test_team))
+    end
+  end
+  
+  describe('#members') do 
+    it(' returns the members in a team, its empty at first') do 
+      test_team = Team.new(:name => "Halo")
+      expect(test_team.members()).to(eq([]))
     end
   end
 end
