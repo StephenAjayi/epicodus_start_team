@@ -14,5 +14,9 @@ class Team
   define_method(:save) do 
     @@all_teams.push(self)
   end
+  
+  define_singleton_method(:clear) do 
+    @@all_teams = []
+  end
 end
 
