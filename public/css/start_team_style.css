@@ -1,21 +1,25 @@
 body {
-  background: #f4f4f4;
+  background: #333;
 }
+
 .home-image {
-  background: url("/images/team.jpg");
-  margin-left: 10px;
-  margin-right:10px;
-  position: relative;
-  width: 2000px;
-  
+  background: url("/images/allen-and-gates.jpg");
+  position: absolute center;
+  padding: 200px 200px 200px 200pxs;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
+  width: 1300px;
+  margin-left: -80px;
+  padding:100px;
 }
 
-.home-image h1 {
-  color: white;
-}
-
-.home-image label {
-  color: white;
+.home-image-text {
+  background-color: rgba(0, 0, 0, .5);
+  margin: 70px 200px 50px 400px;
+  width: 420px;
+  color: #fff;
+  padding: 20px
 }
 
 .jumbotron-logo {
@@ -25,14 +29,24 @@ body {
 }
 
 .jumbotron {
-  background: transparent;
-  color: #79b743;
+  background-color: rgba(0, 0, 0, .5);
+  color: #fff;
 }
 
 .navbar-fixed-top {
-  background: #183183;
+  background: black;
 }
 
 .nav-pills a {
-  color: #333
+  color: #fff;
+}
+
+.navbar-default {
+  color: #333;
+}
+
+.team-submit {
+  background: url("/images/jobs-and-woz.jpg");
+  padding: 300px;
+  background-repeat: no-repeat;
 }

@@ -1,21 +1,20 @@
 <div class="home-image">
-<div class="jumbotron">
-<h1>Welcome to Start Team</h1>
-
-
-<% if @teams.any?() %>
-  <ul>
-    <% @teams.each() do |team| %>
-    <li><a href="/teams/<%= team.id() %>"><%= team.name() %></a></li>
+  <div class="home-image-text">
+    <h1>Welcome to Start Team</h1>
+    
+    <% if @teams.any?() %>
+      <ul class="list-group">
+        <% @teams.each() do |team| %>
+          <li class="list-group-item"><a href="/teams/<%= team.id() %>"><%= team.name() %></a></li>
+        <% end %>
+      </ul>
+    <% else %>
+      <h2>There are currently no teams, add one below.</h2>
     <% end %>
-  </ul>
-<% else %>
-  <h2>There are currently no teams, add one below.</h2>
-<% end %>
 
-<form class='form-group' action="/team_added" method="post">
-  <input class="form-control" type="text" name="name" placeholder="Enter team name">
-  <button class="btn btn-success" type="submit">Add Team</button>
-</form>
-</div>  
+    <form class='form-group' action="/team_added" method="post">
+      <input class="form-control" type="text" name="name" placeholder="Enter team name">
+      <button class="btn btn-success" type="submit">Add Team</button>
+    </form>
+  </div>  
 </div>
