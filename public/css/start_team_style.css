@@ -11,13 +11,10 @@ body {
 .home-image {
   background: url("/images/allen-and-gates.jpg");
   position: absolute center;
-  padding: 200px 200px 200px 200pxs;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 700px;
-  width: 1300px;
-  margin-left: -80px;
-  padding:100px;
+  margin: 0px -100px 0px -100px;
+  padding: 200px;
 }
 
 .home-image-text {
@@ -39,8 +36,8 @@ body {
   color: #fff;
 }
 
-.navbar-fixed-top {
-  background: black;
+.navbar {
+  background-color: black;
 }
 
 .nav-pills a {
@@ -48,7 +45,7 @@ body {
 }
 
 .navbar-default {
-  color: #333;
+  background-color: #333;
 }
 
 .team-submit {
@@ -59,7 +56,24 @@ body {
 
 .member {
   color:white;
-  padding: 400px;
+  padding: 250px;
+  background: url("/images/founders-of-google.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; 
+  margin: 30px 20px 0px 20px;
+}
+
+.member-text {
+  background-color: rgba(0, 0, 0, .5);
+  height: 200px;
+  width: 700px;
+  position: absolute center;
+  padding: 40px;
+}
+
+.members {
+  color:white;
+  padding: 250px;
   background: url("/images/founders-of-google.jpg");
   background-repeat: no-repeat;
   background-size: cover; 
