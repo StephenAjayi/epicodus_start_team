@@ -1,19 +1,26 @@
-<h1>Members of <%= @team.name() %></h1>
-
-<% if @team.members().any?() %>
-  <ul>
-    <% @team.members().each() do |member| %>
-    <li><%= member.first_name() %> <%= member.last_name() %></li>
-    <% end%>
-  </ul>
-<% else %>
-  <h2><%= @team.name() %> has no team members yet, add a member below<h2>
-<% end %>
+<div class="container">
+  <div class="members">
+      
+    <h1>Members of <%= @team.name() %></h1>
+     
+    <% if @team.members().any?() %>
+      <ul>
+        <% @team.members().each() do |member| %>
+          <li><%= member.first_name() %> <%= member.last_name() %></li>
+        <% end%>
+      </ul>
+    <% else %>
+      <h2><%= @team.name() %> has no team members yet, add a member below</h2>
+    <% end %>
 
       
-<form action="/member_added" method="post">
-  <input type="hidden" name="team_id" value="<%= @team.id() %>">
-  <input type="text" name="first_name" placeholder="Enter first name">
-  <input type="text" name="last_name" placeholder="Enter last name">
-  <button type="submit">Add Member</button>
-</form>
+    <form action="/member_added" method="post">
+      <input type="hidden" name="team_id" value="<%= @team.id() %>">
+      <input type="text" name="first_name" placeholder="Enter first name">
+      <input type="text" name="last_name" placeholder="Enter last name">
+      <button type="submit">Add Member</button>
+    </form>
+  </div>
+</div>
+      
+      
