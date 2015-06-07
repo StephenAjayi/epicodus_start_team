@@ -50,7 +50,7 @@ body {
 
 .team-submit {
   background: url("/images/jobs-and-woz.jpg");
-  padding: 300px;
+  padding: 200px;
   background-repeat: no-repeat;
 }
 
@@ -71,11 +71,24 @@ body {
   padding: 40px;
 }
 
-.members {
-  color:white;
+.members-of-team {
   padding: 250px;
-  background: url("/images/founders-of-google.jpg");
+  background: url("/images/yahoo_founders.jpg");
   background-repeat: no-repeat;
   background-size: cover; 
   margin: 30px 20px 0px 20px;
+}
+
+
+
+.members-of-team-text {
+  background-color: rgba(0, 0, 0, .5);
+  width: 420px;
+  color: #fff;
+  margin: 0px 20px 0px 80px;
+  padding:20px;
+}
+
+.members-of-team-text input {
+  color: #333;
 }
